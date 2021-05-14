@@ -1,8 +1,8 @@
-
+import Badge from './Components/Badge'
 
 function App() {
   return (
-   <div>React App</div>
+   <Badge></Badge>
   );
 }
 
