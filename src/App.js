@@ -1,9 +1,19 @@
-import Badge from './Components/Badge'
+import React from "react"
+import Layout from "./pages/Layout/Layout"
+import Main from "./pages/main/main"
+import NewBadge from "./pages/NewBadge/NewBadge"
 
 function App() {
   return (
-   <Badge></Badge>
+    <React.Fragment>
+      <Layout>
+        <NewBadge></NewBadge>
+        <Main title={"Welcome"}></Main>
+      </Layout>
+      
+    </React.Fragment>
   );
+    
 }
 
 export default App;
