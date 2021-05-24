@@ -7,7 +7,7 @@ function App() {
   return (
     <React.Fragment>
       <Layout>
-        <NewBadge></NewBadge>
+        {/*<NewBadge></NewBadge>*/}
         <Main title={"Welcome"}></Main>
       </Layout>
       
