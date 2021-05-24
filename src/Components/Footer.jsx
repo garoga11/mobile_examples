@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <React.Fragment>
             <div className="Footer">
-                <p> 🤩👽 Footer with ReactJs 🤩👽</p>
+                <p> 👽🤩 Footer with ReactJs 🤩👽</p>
             </div>
 
         </React.Fragment>
