@@ -8,7 +8,7 @@ const Hero = props =>{
             <div className="Hero">
                 <div className="Hero__color_filter" style={{height: props.h}}></div>
                 <div className="Hero__img" style={{height: props.h}}>
-                    <img src={HeroImage}></img>
+                    <img src={HeroImage} alt="Hero image"></img>
                 </div>
             </div>
         </React.Fragment>
