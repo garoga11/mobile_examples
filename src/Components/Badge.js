@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import HeaderBackground from '../images/fondito.jpg';
 import "./style/Badge.css";
 
 
@@ -10,13 +9,13 @@ class Badge extends Component {
             <React.Fragment>
                 <div className="Badge m-5 flex-column">
                     <div className="Badge__header">
-                        <img src={HeaderBackground} alt="Header background"></img>
+                        <img src="https://images.pexels.com/photos/771881/pexels-photo-771881.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"alt="Header background"></img>
                     </div>
                     <div className="Badge__userInfo container mt-5 mb-1">
                         <div className="Badge__userImage">
-                            <img src={this.props.picture} alt="Profile pic"></img>
+                            <img src="https://images.pexels.com/photos/1484810/pexels-photo-1484810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Profile pic"></img>
                         </div>
-                        <h4 className="text-center mt-5">Ricardo Rodriguez <i>32</i></h4>
+                        <h4 className="text-center mt-5">Ricardo Rodriguez <i>21</i></h4>
                         <p className="text-center">New York City</p>
                     </div>
                     <div className="Badge__info container pt-3">
