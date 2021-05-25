@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./style/Header.css"
 
 class Header extends React.Component{
@@ -6,7 +7,9 @@ class Header extends React.Component{
         return(
             <React.Fragment>
                 <div className="Header">
-                    <img src="https://image.flaticon.com/icons/png/128/4689/4689456.png" alt="Icon"/>
+                    <Link to ="/">
+                        <img src="https://image.flaticon.com/icons/png/128/4689/4689456.png" alt="Icon"/>
+                    </Link>
                 </div>
             </React.Fragment>
 
