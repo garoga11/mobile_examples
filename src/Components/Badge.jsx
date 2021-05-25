@@ -34,7 +34,7 @@ class Badge extends Component {
                             </div>
                             <div className="col">
                                 <h4 className="text-center fw bold">{this.props.post}</h4>
-                                <p className="text-center">Post</p>
+                                <p className="text-center">Pictures</p>
                             </div>
                         </div>
                     </div>
