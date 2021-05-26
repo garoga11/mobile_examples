@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import './style/BadgeForm.css'
 
 class BadgeForm extends React.Component{
