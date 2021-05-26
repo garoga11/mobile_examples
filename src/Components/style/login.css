@@ -1,0 +1,43 @@
+.Container__card {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 530px;
+  margin-top: 50px;
+  border: 1px solid rgb(228, 162, 224);
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.24);
+  background-image: url("../../images/Picture1.jpg");
+  text-decoration: solid;
+  color: rgb(177, 75, 167);
+}
+.Submit__button {
+  background-color: white;
+  padding: 10px 40px;
+  border-radius: 5px;
+  align-self: center;
+  border: 1px solid lightgray;
+  margin-bottom: 50px;
+  color: rgb(177, 75, 167);
+}
+.Submit__button:hover {
+  background-color: rgb(241, 158, 241);
+  color: white;
+  font-weight: bold;
+}
+
+.Icon__image {
+  width: 60px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.Link__password {
+  color: rgb(177, 75, 167);
+  text-decoration: none;
+}
+.Link__password:hover {
+  color: rgb(235, 159, 228);
+}
