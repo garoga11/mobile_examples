@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import './style/BadgeForm.css'
 
 class BadgeForm extends React.Component{
@@ -74,8 +74,6 @@ class BadgeForm extends React.Component{
                                 save
                             </button>
                         </div>
-
-                        
                     </form>
                 </div>
 
