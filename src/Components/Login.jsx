@@ -33,12 +33,9 @@ class Login extends Component{
                                 Login
                             </button>
                             <div className="row mb-5">
-                                <a className="Link__password ml-4">Forgot your password?</a>
+                                <a href="/" className="Link__password ml-4">Forgot your password?</a>
                             </div>
-                            
-
                         </div>
-
                     </form>
                 </div>
                 
