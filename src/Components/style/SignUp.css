@@ -1,0 +1,32 @@
+.Container__signUp {
+  width: 650px;
+  border: 1px solid rgb(228, 162, 224);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-image: url("../../images/Picture1.jpg");
+  color: rgb(177, 75, 167);
+}
+.Form1 {
+  margin-left: 15px;
+}
+.Form2 {
+  margin-right: 15px;
+}
+
+.SignUp__button {
+  background-color: white;
+  padding: 10px 40px;
+  border-radius: 5px;
+  align-self: center;
+  border: 1px solid lightgray;
+  margin-bottom: 50px;
+  color: rgb(177, 75, 167);
+  margin-left: 70px;
+  margin-right: 70px;
+}
+.SignUp__button:hover {
+  color: rgb(201, 129, 194);
+}
