@@ -10,6 +10,17 @@
       "likes": "",
       "post": "",
       "id": 1
+    },
+    {
+      "header_picture": "https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "profile_picture": "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "name": "Rodrigo",
+      "age": "22",
+      "city": "New York",
+      "followers": "",
+      "likes": "",
+      "post": "",
+      "id": 2
     }
   ]
 }
