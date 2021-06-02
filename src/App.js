@@ -1,12 +1,12 @@
 import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-
 import Layout from "./pages/Layout/Layout"
 import Main from "./pages/main/main"
 import NewBadge from "./pages/NewBadge/NewBadge"
 import Login from "./Components/Login"
 import PageNotFound from "./Components/PageNotFound"
 import SignUp from "./Components/SignUp"
+import Badges from "./pages/Badges/Badges"
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
           <Route exact path="/404" component={PageNotFound}></Route>
           <Route exact path="/signup" component={SignUp}></Route>
           <Route component={Error} ></Route>
+          <Route exact path ="/badges" component={Badges}></Route>
         </Switch>
      </Layout>
       
