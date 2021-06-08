@@ -1,6 +1,6 @@
-import React from "react"
-import Skeleton from "react-loading-skeleton"
-import "./style/SkeletonItem.css"
+import React from "react";
+import Skeleton from "react-loading-skeleton";
+import "./style/BadgesList.css";
 
 const SkeletonItem = () =>{
     return(
@@ -51,4 +51,4 @@ const SkeletonItem = () =>{
         
     );
 }
-export default SkeletonItem
+export default SkeletonItem;
