@@ -18,8 +18,8 @@ function App() {
           <Route exact path="/login" component={Login}></Route>
           <Route exact path="/404" component={PageNotFound}></Route>
           <Route exact path="/signup" component={SignUp}></Route>
-          <Route component={Error} ></Route>
           <Route exact path ="/badges" component={Badges}></Route>
+          <Route component={Error} ></Route>
         </Switch>
      </Layout>
       
