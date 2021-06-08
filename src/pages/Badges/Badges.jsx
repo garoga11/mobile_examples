@@ -1,7 +1,8 @@
 import React from "react";
-import "./Badges.css";
-import api from "../../libs/api";
 import SkeletonItem from "../../Components/SkeletonItem";
+import BadgesList from "../../Components/BadgesList";
+import api from "../../libs/api";
+import "../../Components/style/BadgesList.css";
 
 class Badges extends React.Component{
 
@@ -17,37 +18,35 @@ class Badges extends React.Component{
     }
 
     fetchData = async() =>{
-        this.setState({loading:true, error:null})
+        this.setState({loading: true, error: null});
         try{
-            const data = await api.badges.list()
-            data.reverse()
-            this.setState({loading:false, data: data})
-
+            const data = await api.badges.list();
+            data.reverse();
+            this.setState({loading:false, data: data});
         }catch(error){
-            this.setState({loading:false, error:error, data: []})
+            this.setState({loading: false, error: error, data: [] });
         }
-    }
+    };
 
     setFetchInterval(){
-        this.interval = setInterval(this.fetchData, 3000)
+        this.interval = setInterval(this.fetchData, 3000);
     }
 
-    componentWillUnmount(){
-        clearInterval(this.interval)
+    componentWillUnmount(){ 
+        clearInterval(this.interval);
     }
 
     render(){
-        if(this.state.loading ===true && !this.state.data){
+        if(this.state.loading===true && !this.state.data){
             return <SkeletonItem></SkeletonItem>
 
         }
         return(
             <React.Fragment>
-                <h1>
-                    All badges
-                </h1>
+                <div className="Badges__container"></div>
+                <BadgesList badges={this.state.data}></BadgesList>
             </React.Fragment>
-        )
+        );
     }
 }
 
