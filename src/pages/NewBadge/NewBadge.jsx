@@ -2,8 +2,9 @@ import React from "react"
 import Hero from "../../Components/Hero"
 import Badge from "../../Components/Badge"
 import BadgeForm from "../../Components/BadgeForm"
+import Footer from "../../Components/Footer"
 import "./NewBadge.css"
-import api from "../../libs/api"
+import api from "../../libs/fetch"
 
 class NewBadge extends React.Component{
 
@@ -11,14 +12,15 @@ class NewBadge extends React.Component{
         loading: false,
         error: null,
         form:{
-            header_picture:"",
-            profile_picture:"",
+            header_img_url:"",
+            profile__picture_url:"",
             name:"",
             age:"",
             city:"",
             followers:"",
             likes:"",
             post:"",
+            posts:"",
         }
     }
 
@@ -38,7 +40,7 @@ class NewBadge extends React.Component{
         try{
             await api.badges.create(this.state.form)
             this.setState({loading:false, error:null})
-            this.props.history.push("/")
+            this.props.history.push("/badges")
 
         }catch(error){
             this.setState({loading:false, error: error})
@@ -56,8 +58,8 @@ class NewBadge extends React.Component{
                     <div className="row">
                         <div className="col-6">
                             <Badge
-                                header_picture = {this.state.form.header_picture || "image link goes here"}
-                                profile_picture = {this.state.form.profile_picture || ""}
+                                header_img_url = {this.state.form.header_img_url || "image link goes here"}
+                                profile__picture_url = {this.state.form.profile__picture_url || "iumage link goes here"}
                                 name = {this.state.form.name || "Janeth Gonzales"}
                                 age = {this.state.form.age || "21"}
                                 city= {this.state.form.city || "New Yo0rk"}
@@ -76,6 +78,7 @@ class NewBadge extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Footer s={{bottom:0}}> </Footer>
                 
             </React.Fragment>
         );
