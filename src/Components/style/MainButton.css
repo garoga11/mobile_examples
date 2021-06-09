@@ -24,3 +24,31 @@
 .Button:hover p {
   color: white;
 }
+
+.Button-light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 40px;
+  margin-top: 2em;
+  background-color: rgb(214, 149, 214);
+}
+
+.Button-light p {
+  color: white;
+  font-size: 1.2em;
+  margin: 8px 60px;
+  padding-top: 5px;
+}
+
+.Button-light:hover {
+  background-color: rgb(226, 176, 226);
+  border: 2px solid rgb(90, 2, 56);
+  font-weight: bold;
+}
+.Button-light:hover p {
+  color: white;
+}
+
