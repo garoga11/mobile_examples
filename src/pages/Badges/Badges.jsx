@@ -1,15 +1,20 @@
 import React from "react";
 import SkeletonItem from "../../Components/SkeletonItem";
 import BadgesList from "../../Components/BadgesList";
-import api from "../../libs/api";
-import "../../Components/style/BadgesList.css";
+import Footer from "../../Components/Footer"
+import Button from "../../Components/MainButton"
+import api from "../../libs/fetch";
+import "./Badges.css";
+
+
 
 class Badges extends React.Component{
 
     state={
         loading:true,
         error: null,
-        data: undefined
+        data: undefined,
+        handle_footer: {bottom:0}
     }
 
     componentDidMount(){
@@ -17,12 +22,19 @@ class Badges extends React.Component{
         this.setFetchInterval();
     }
 
-    fetchData = async() =>{
+    fetchData = async () => {
         this.setState({loading: true, error: null});
         try{
             const data = await api.badges.list();
             data.reverse();
-            this.setState({loading:false, data: data});
+            this.setState({loading: false, data: data});
+
+            if (data.lenght > 3){
+                this.setState({handle_footer:{position:"relative"}})
+            }else{
+                this.setState({handle_footer:{bottom:0}})
+            }
+
         }catch(error){
             this.setState({loading: false, error: error, data: [] });
         }
@@ -43,8 +55,17 @@ class Badges extends React.Component{
         }
         return(
             <React.Fragment>
-                <div className="Badges__container"></div>
+                <div className="Badges__container">
+                    <div className="Badges__button">
+                        <Button
+                            theme={"Button-light"}
+                            contentText={"New badge"}
+                            link={"/new"}>
+                        </Button>
+                    </div>
+                </div>
                 <BadgesList badges={this.state.data}></BadgesList>
+                <Footer s={this.state.handle_footer}></Footer>
             </React.Fragment>
         );
     }
