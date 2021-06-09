@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Footer from "./Footer"
 import "./style/SignUp.css"
 
 class SignUp extends Component{
@@ -91,6 +92,7 @@ class SignUp extends Component{
                     </div>
                     
                 </div>
+                <Footer s={{bottom:0}}> </Footer>
             </React.Fragment>
         );
     }
