@@ -1,8 +1,7 @@
 import React from "react";
 import SkeletonItem from "../../Components/SkeletonItem";
 import BadgesList from "../../Components/BadgesList";
-import Footer from "../../Components/Footer"
-import Button from "../../Components/MainButton"
+import PageError from "../../Components/PageError"
 import api from "../../libs/fetch";
 import "./Badges.css";
 
@@ -19,7 +18,9 @@ class Badges extends React.Component{
 
     componentDidMount(){
         this.fetchData();
-        this.setFetchInterval();
+        if(this.state.data){
+            this.setFetchInterval();
+        }
     }
 
     fetchData = async () => {
@@ -53,19 +54,12 @@ class Badges extends React.Component{
             return <SkeletonItem></SkeletonItem>
 
         }
+        if(this.state.error){
+            return <PageError error={this.state.error.message}></PageError>
+        }
         return(
             <React.Fragment>
-                <div className="Badges__container">
-                    <div className="Badges__button">
-                        <Button
-                            theme={"Button-light"}
-                            contentText={"New badge"}
-                            link={"/new"}>
-                        </Button>
-                    </div>
-                </div>
                 <BadgesList badges={this.state.data}></BadgesList>
-                <Footer s={this.state.handle_footer}></Footer>
             </React.Fragment>
         );
     }

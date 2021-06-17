@@ -1,5 +1,7 @@
 import React from "react"
 import BadgeDetailsUi from "./BadgeDetailsUi"
+import PageError from "./PageError"
+import Loader from "./Loader"
 import api from "../libs/fetch"
 
 class BadgeDetails extends React.Component{
@@ -7,7 +9,8 @@ class BadgeDetails extends React.Component{
     state = {
         loading:false,
         error: null,
-        data: {}
+        data: {}, 
+        modalIsOpen:false,
     }
 
     componentDidMount(){
@@ -25,9 +28,44 @@ class BadgeDetails extends React.Component{
             this.setState({loading:false, error:error})
         }
     }
+    handleOpenModal=()=>{
+        this.setState({ modalIsOpen: true });
+    };
+    handleCloseModal=()=>{
+        this.setState({ modalIsOpen: false });
+    };
+
+    handleDeleteBadge= async()=>{
+        this.setState({loading:true, error:null})
+        try{
+            await api.badges.remove(this.props.match.params.badgeId)
+            this.setState({loading:false})
+            this.props.history.push("./badges")
+
+        }catch(error){
+            this.setState({loading:false, error:error})
+
+        }
+    };
 
     render(){
-        return <BadgeDetailsUi badge={this.state.data}></BadgeDetailsUi>;
+        if(this.state.loading){
+            return <Loader></Loader>
+        }
+
+        if(this.state.error){
+            return <PageError error={this.state.error.message}></PageError>
+        }
+        return (
+            <BadgeDetailsUi
+                onCloseModal={this.handleCloseModal}
+                onOpenModal={this.handleOpenModal}
+                modalIsOpen={this.state.modalIsOpen}
+                onDeleteBadge={this.handleDeleteBadge}
+                badge={this.state.data}
+            >
+            </BadgeDetailsUi>
+        );
     }
 }
 

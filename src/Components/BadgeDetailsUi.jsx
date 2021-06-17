@@ -2,6 +2,8 @@ import React from "react"
 import Badge from "./Badge"
 import Hero from "./Hero"
 import Footer from "./Footer"
+import {Link} from "react-router-dom"
+import DeleteBadgeModal from "./DeleteBadgeModal"
 
 const BadgeDetailsUi = props =>{
     const badge= props.badge
@@ -18,12 +20,22 @@ const BadgeDetailsUi = props =>{
                                 name = {badge.name}
                                 age = {badge.age}
                                 city = {badge.city}
-                                followers = {badge.followers}
-                                likes = {badge.likes}
-                                post = {badge.post}>
+                                followers = {badge.followers || 0}
+                                likes = {badge.likes || 0}
+                                post = {badge.post || 0}>
                             </Badge>
                         </div>
-                    <div className="col-6"></div>
+                        <div className="col-6 mt-5">
+                            <h2>Actions</h2>
+                            <Link className="btn btn-success mx-3" to={`/${badge._id}/edit/`}> Edit</Link>
+                            <button onClick={props.onOpenModal} className="btn btn-danger mx-3">Delete</button>
+                            <DeleteBadgeModal
+                            isOpen={props.modalIsOpen}
+                            onClose={props.onCloseModal}
+                            onDeleteBadge={props.onDeleteBadge}
+                            >
+                            </DeleteBadgeModal>
+                        </div>
                     </div>
                 </div>
                 <Footer></Footer>

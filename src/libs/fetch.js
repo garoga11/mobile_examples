@@ -26,16 +26,16 @@ const api = {
             
         },
         read(badgeId){
-            return callApi(`/_id:${badgeId}`);
+            return callApi(`/_id:${badgeId}/`);
         },
         update(badgeId, updates){
-            return callApi(`/_id:${badgeId}`, {
+            return callApi(`/_id:${badgeId}/`, {
                 method: 'PUT',
                 body: JSON.stringify(updates),
             });
         },
         remove(badgeId){
-            return callApi(`/_id:${badgeId}`, {
+            return callApi(`/_id:${badgeId}/`, {
                 method: 'DELETE',
             });
         },

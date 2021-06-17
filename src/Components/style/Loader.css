@@ -1,0 +1,48 @@
+.Loader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.Lds-grid{
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.Lds-grip div{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: lime;
+    animation: Lds-grid 1.2 linear infinite;
+}
+
+.Lds-grid div:nth-child(1){
+    top: 10px;
+    left: 10px;
+    animation-delay: 0s;
+}
+.Lds-grid div:nth-child(2){
+    top: 10px;
+    left: 40px;
+    animation-delay: -0.4s;
+}
+.Lds-grid div:nth-child(3){
+    top: 10px;
+    left: 70px;
+    animation-delay: -0.8s;
+}
+@keyframes Lds-grid{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+}
