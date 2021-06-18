@@ -2,7 +2,7 @@ import React from "react"
 import Hero from "../../Components/Hero"
 import Button from "../../Components/MainButton"
 import Footer from "../../Components/Footer"
-import "./main.css"
+import "./Landing.css"
 
 const Main = (props) => {
     return (
