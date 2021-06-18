@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Layout from "./pages/Layout/Layout";
-import Main from "./pages/main/main";
+import Main from "./pages/Landing/Landing";
 import NewBadge from "./pages/NewBadge/NewBadge";
 import Login from "./Components/Login";
 import PageNotFound from "./Components/PageNotFound";
